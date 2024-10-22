@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 // Widget trong Flutter
 // Neu can quan ly trang thai stfull khong thi stless
 void main() {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(child: Widget2(false)),
+        body: SafeArea(child: Center(child: Widget2(false))),
       ),
     );
   }
@@ -53,9 +52,11 @@ class _Widget2State extends State<Widget2> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed:() {setState(() {
-          _localIsChecked = !_localIsChecked;
-        });},
+        onPressed: () {
+          setState(() {
+            _localIsChecked = !_localIsChecked;
+          });
+        },
         child: _localIsChecked ? const Text("on") : const Text('off'));
   }
 }
