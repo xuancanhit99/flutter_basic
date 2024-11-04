@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// 13
 // Colors cung can thu vien material
 // Tom lai nen dung thu vien material truoc-MaterialApp
 // Nhung cai nho nho can iOS them vao sau
@@ -21,9 +22,6 @@ void main() {
 
 class Body extends StatelessWidget {
   const Body({super.key});
-
-
-
   @override
   Widget build(BuildContext context) {
     print("Screen Info: ${MediaQuery.of(context).devicePixelRatio}"
